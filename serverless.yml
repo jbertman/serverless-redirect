@@ -1,0 +1,13 @@
+service: redirect
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+
+functions:
+  redirect:
+    handler: handler.redirect
+    events:
+      - http:
+         path: redirect
+         method: get
